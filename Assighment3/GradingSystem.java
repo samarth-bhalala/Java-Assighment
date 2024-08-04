@@ -2,21 +2,21 @@
 import java.util.Scanner;
 
 public class GradingSystem {
-    private Student[] students;
+    private Student1[] students;
     private Grade[] grades;
     private int[] courseCredits;
     private int studentCount;
     private int gradeCount;
 
     public GradingSystem(int maxStudents, int maxGrades) {
-        students = new Student[maxStudents];
+        students = new Student1[maxStudents];
         grades = new Grade[maxGrades];
         courseCredits = new int[maxGrades];
         studentCount = 0;
         gradeCount = 0;
     }
 
-    public void addStudent(Student student) {
+    public void addStudent(Student1 student) {
         if (studentCount < students.length) {
             students[studentCount] = student;
             studentCount++;

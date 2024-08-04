@@ -44,7 +44,7 @@ public class GradingSystemMGTM {
         System.out.print("Enter student name: ");
         String name = scanner.next();
 
-        gradingSystem.addStudent(new Student(studentID, name));
+        gradingSystem.addStudent(new Student1(studentID, name));
     }
 
      private static void addGrade(GradingSystem gradingSystem, Scanner scanner) {
