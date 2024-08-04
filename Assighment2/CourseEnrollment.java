@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class CourseEnrollment {
-    private Course[] courseCatalog;
-    private Enrollment enrollment;
+    public static Course[] courseCatalog;
+    public static Enrollment enrollment;
 
     public CourseEnrollment(int numCourses, int numStudents) {
         courseCatalog = new Course[numCourses];
@@ -11,18 +11,6 @@ public class CourseEnrollment {
 
     public void addCourse(int courseID, String courseName, int credits) {
         courseCatalog[courseID - 1] = new Course(courseID, courseName, credits);
-    }
-
-    public void enrollStudent(int studentID, int courseID) {
-        enrollment.enroll(studentID - 1, courseID);
-    }
-
-    public void dropStudent(int studentID, int courseID) {
-        enrollment.drop(studentID - 1, courseID);
-    }
-
-    public void printEnrolledCourses(int studentID) {
-        enrollment.getEnrolledCourses(studentID - 1, courseCatalog);
     }
 
     public static void main(String[] args) {
@@ -58,19 +46,20 @@ public class CourseEnrollment {
                     int studentID = scanner.nextInt();
                     System.out.print("Enter course ID: ");
                     int courseID = scanner.nextInt();
-                    courseEnrollment.enrollStudent(studentID, courseID);
+                    enrollment.enroll(studentID - 1, courseID);
+
                     break;
                 case 2:
                     System.out.print("Enter student ID: ");
                     studentID = scanner.nextInt();
                     System.out.print("Enter course ID: ");
                     courseID = scanner.nextInt();
-                    courseEnrollment.dropStudent(studentID, courseID);
+                    enrollment.drop(studentID - 1, courseID);
                     break;
                 case 3:
                     System.out.print("Enter student ID: ");
                     studentID = scanner.nextInt();
-                    courseEnrollment.printEnrolledCourses(studentID);
+                    enrollment.getEnrolledCourses(studentID - 1, courseCatalog);
                     break;
                 case 4:
                     System.exit(0);
@@ -79,5 +68,6 @@ public class CourseEnrollment {
                     System.out.println("Invalid choice. Please try again.");
             }
         }
+        
     }
 }

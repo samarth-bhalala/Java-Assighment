@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class StudentRecordMGMT {
     public static void main(String[] args) {
         StudentRecordSystem system = new StudentRecordSystem();
@@ -23,7 +22,6 @@ public class StudentRecordMGMT {
                     int age = scanner.nextInt();
                     System.out.print("Enter student department: ");
                     String department = scanner.next();
-
                     Student student = new Student(studentID, name, age, department);
                     system.addStudent(student);
                     break;
@@ -47,5 +45,10 @@ public class StudentRecordMGMT {
                     System.out.println("Invalid option. Try again!");
             }
         }
+        
+        
+
     }
+    
+    
 }

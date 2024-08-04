@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 public class GradingSystem {
     private Student1[] students;
     private Grade[] grades;

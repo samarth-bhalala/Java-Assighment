@@ -30,12 +30,11 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Student " +
                 "studentID=" + studentID +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", department='" + department + '\'' +
-                '}';
+                ", department='" + department + '\'' ;
     }
 }
 
